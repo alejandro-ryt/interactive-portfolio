@@ -1,6 +1,8 @@
 :root {
     --primary-color: #0C0E12;
+    --primary-dark-color: #14161a;
     --secondary-color: #1e90ff;
+    --secondary-dark-color: #0080ff;
     --light-color: #dfe6e9;
 }
 
@@ -21,6 +23,7 @@ main {
     width: 60rem;
     margin: 0 auto;
     margin-top: 10rem;
+    margin-bottom: 10rem;
     background-color: var(--primary-color);
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(4rem, 1fr));
@@ -123,4 +126,106 @@ header figure img {
     font-weight: bold;
     padding: 1rem;
     color: var(--light-color);
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+/* Showcase Section */
+.showcase-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 20px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    padding: 20px;
+    color: var(--primary-color);
+}
+
+.showcase-section .project-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--primary-dark-color);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--light-color);
+    padding-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.showcase-section figure img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.showcase-section figcaption {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.showcase-section p {
+    margin-left: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    padding: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form form input,
+textarea {
+    margin: .5rem 0rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-dark-color);
+    border-radius: .75rem;
+    outline: none;
+    border: none;
+}
+
+.contact-form form textarea {
+    height: 8rem;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1rem;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-dark-color);
 }
