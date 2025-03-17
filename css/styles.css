@@ -20,7 +20,7 @@ body {
 
 main {
   display: grid;
-  width: 60rem;
+  max-width: 60rem;
   margin: 0 auto;
   margin-top: 10rem;
   margin-bottom: 10rem;
@@ -68,6 +68,11 @@ main .info-section figure img {
   border: 0.25rem solid var(--primary-color);
   border-radius: 50%;
 }
+@media screen and (max-width: 518px) {
+  main .info-section figure img {
+    top: -8rem;
+  }
+}
 main .info-section .personal-info {
   width: 100%;
   display: flex;
@@ -80,6 +85,18 @@ main .info-section .personal-info div h1 {
 main .info-section .personal-info div h3 {
   font-size: 1rem;
   font-weight: normal;
+}
+@media screen and (max-width: 518px) {
+  main .info-section .personal-info div h3 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 518px) {
+  main .info-section .personal-info {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
 }
 main .info-section .social-media {
   display: flex;
